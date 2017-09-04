@@ -1,0 +1,8 @@
+- name: Provision production server through "jumper"
+  hosts: production
+  remote_user: sayed
+
+  become_user: root
+  roles:
+    - tunnel
+    - nginx

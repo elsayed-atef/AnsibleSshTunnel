@@ -1,0 +1,6 @@
+ - name: Create SSH tunnel
+   become: yes
+   #shell: ssh -t sayed@172.16.0.133 ssh sayed@172.16.0.32
+  # shell: ssh -L localhost:22:172.16.0.133:22 172.16.0.32
+   #shell: echo "******************" "is" $?
+   shell: touch /home/sayed/fromans.txt

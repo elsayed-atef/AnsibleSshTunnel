@@ -1,0 +1,11 @@
+[production]
+
+172.16.0.132 ansible_host=172.16.0.133 ansible_ssh_extra_args="-R22:172.16.0.133:22"
+
+[jumper]
+172.16.0.133
+#localhost
+[all:vars]
+ansible_connection=ssh
+ansible_ssh_user=sayed
+ansible_ssh_pass=1234

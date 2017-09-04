@@ -1,0 +1,17 @@
+- name: install nginx
+  become: yes
+  apt: >
+    name=nginx
+    update_cache=true
+    state=latest
+  tags:
+    - test_ng
+
+- name: Copy defaults
+  become: yes
+  template:
+    src=default
+    dest=/etc/nginx/sites-available/
+  notify: reload nginx
+  tags:
+    - test_copy
